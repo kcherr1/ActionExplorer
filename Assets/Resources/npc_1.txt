@@ -1,0 +1,16 @@
+// dialog parts
+v0:Hey
+v1:Do you want to hear a tale?
+v2:Ok, let me tell you a tale
+v3:Once upon a time...
+v4:There was this giant
+v5:Ok, I'll stop
+
+// options
+e1:yes
+e2:no
+e3:Keep talking
+e4:Shut up already
+
+//  V0     V1     V2     V3     V4     V5
+a:-0----,--1--2,---0--,----34,------,------

@@ -15,8 +15,14 @@ public class ExtendedPlayerActions : MonoBehaviour {
   public void OnClick() {
     //Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
     Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-    if (Physics.Raycast(ray, out RaycastHit hit, 5)) {
-      if (hit.transform.gameObject.CompareTag("Collectable")) {
+    if (Physics.Raycast(ray, out RaycastHit hit, 12)) {
+      if (hit.transform.gameObject.CompareTag("NPC")) {
+        hit.transform.gameObject.GetComponent<NPC>().StartTalking();
+      }
+      else if (hit.transform.gameObject.CompareTag("NPC Button")) {
+        hit.transform.gameObject.GetComponent<NPCDialogButton>().Click();
+      }
+      else if (hit.transform.gameObject.CompareTag("Collectable")) {
         hit.transform.gameObject.GetComponent<Collectable>().Collect();
       }
 

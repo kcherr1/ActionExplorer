@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - Collectable
+  - NPC
+  - NPC Button
   layers:
   - Default
   - TransparentFX
